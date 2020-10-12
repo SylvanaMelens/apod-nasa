@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-image: url("./cosmos-pexels.jpg");
 }
 
 .App {
@@ -28,7 +28,7 @@ h2 {
 
 h3 {
   position: fixed;
-  bottom: 2em;
+  bottom: 1em;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -84,8 +84,8 @@ span[data-descr] {
 span[data-descr]:hover::after {
   content: attr(data-descr);
   position: absolute;
-  left: 50%;
-  top: 7em;
+  left: 55%;
+  top: 12em;
   transform: translate(-50%, -50%);
   border: 1px #aaaaaa solid;
   border-radius: 10px;

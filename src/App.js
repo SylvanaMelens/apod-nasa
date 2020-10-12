@@ -12,12 +12,23 @@ const App = () => {
       .then((data) => setImg(data))
       .catch(error => console.log(error)) // error json
       .catch(error => console.log(error)) // error api
-  }, []);
+  }, [ApiKey]);
 
+  const item = (img.media_type !== "video" ) ? (
+  <div> 
+    <img src={img.url} alt={img.title} />        
+  </div> ) : (
+  <div style={{top: "20em", position:"relative", paddingBottom: "30px"}}>
+        <iframe title={img.title} src={img.url} frameborder="0" width="300px" allow="fullscreen"/>
+        <p>To see image or video in full size, please click <a href={img.url} target="_blank" rel="noopener noreferrer">here</a></p>
+  </div>)
+    
+    
   return (
     <div className="App">
       <div className="img">
-        <img src={img.url} alt={img.title} />
+        {item}
+
         <div className="text">
           <h1>Every day an astronomy picture from NASA, today is : </h1>
           <h2>
@@ -25,7 +36,7 @@ const App = () => {
               <strong> {img.title} </strong>
             </span>
           </h2>
-          <p>Copyright : {img.copyright}</p>
+          <p>Copyright : {img.copyright || "/"}</p>
           <div className="credit">
             {" "}
             Credit :{" "}
@@ -37,7 +48,8 @@ const App = () => {
               api.nasa.gov
             </a>
           </div>
-          <h3>See you tomorrow for another wonderful image!!</h3>
+          <h3>See you tomorrow for another wonderful picture !</h3>
+ 
         </div>
       </div>
     </div>
