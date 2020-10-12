@@ -18,9 +18,10 @@ const App = () => {
   <div> 
     <img src={img.url} alt={img.title} />        
   </div> ) : (
-  <div style={{top: "20em", position:"relative", paddingBottom: "30px"}}>
+  <div style={{top: "17em", position:"relative", paddingBottom: "30px"}}>
+          <p>To see image or video in full size, please click <a href={img.url} target="_blank" rel="noopener noreferrer">here</a></p>
         <iframe title={img.title} src={img.url} frameborder="0" width="300px" allow="fullscreen"/>
-        <p>To see image or video in full size, please click <a href={img.url} target="_blank" rel="noopener noreferrer">here</a></p>
+
   </div>)
     
     
