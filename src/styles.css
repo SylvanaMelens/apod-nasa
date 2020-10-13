@@ -17,6 +17,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 h1,
 h2 {
   font-size: 1.2em;
@@ -45,6 +46,8 @@ img {
 a {
   text-decoration: none;
   color: whitesmoke;
+  font-weight: bold;
+  font-style: italic;
 }
 
 p {
@@ -87,7 +90,7 @@ span[data-descr]:hover::after {
   left: 55%;
   top: 12em;
   transform: translate(-50%, -50%);
-  border: 1px #aaaaaa solid;
+  border: 1px #aaa solid;
   border-radius: 10px;
   background-color: #333;
   color: whitesmoke;
@@ -95,4 +98,5 @@ span[data-descr]:hover::after {
   padding: 1em;
   width: 290px;
   text-align: justify;
+  opacity: 1;
 }

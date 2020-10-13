@@ -14,22 +14,24 @@ const App = () => {
       .catch(error => console.log(error)) // error api
   }, [ApiKey]);
 
-  const item = (img.media_type !== "video" ) ? (
-  <div> 
-    <img src={img.url} alt={img.title} />        
-  </div> ) : (
-  <div style={{top: "17em", position:"relative", paddingBottom: "30px"}}>
-          <p>To see image or video in full size, please click <a href={img.url} target="_blank" rel="noopener noreferrer">here</a></p>
-        <iframe title={img.title} src={img.url} frameborder="0" width="300px" allow="fullscreen"/>
-
-  </div>)
-    
+  const item = (img.media_type !== "video") 
+  ? 
+  (
+    <div> 
+      <img src={img.url} alt={img.title} />
+    </div> 
+  ) 
+  : 
+  (
+    <div style={{top: "17em", position:"relative", paddingBottom: "30px"}}>
+      <iframe title={img.title} src={img.url} frameborder="0" width="300px" allow="fullscreen"/>
+    </div>
+  )
     
   return (
     <div className="App">
       <div className="img">
         {item}
-
         <div className="text">
           <h1>Every day an astronomy picture from NASA, today is : </h1>
           <h2>
@@ -49,11 +51,14 @@ const App = () => {
               api.nasa.gov
             </a>
           </div>
+          <p>To see image or video in original size, please click 
+             <a href={img.url} target="_blank" rel="noopener noreferrer"> here</a>
+          </p>
           <h3>See you tomorrow for another wonderful picture !</h3>
- 
-        </div>
+         </div>
       </div>
     </div>
   );
 };
+
 export default App;
