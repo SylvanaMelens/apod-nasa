@@ -32,11 +32,12 @@ const App = () => {
     <div className="App">
       <div className="img">
         {item}
+        {img.url ? (
         <div className="text">
           <h1>Every day an astronomy picture from NASA, today is : </h1>
           <h2>
             <span data-descr={img.explanation}>
-              <strong> {img.title || "Uh uh it's seems there's no picture today :/"} </strong>
+              <strong> {img.title} </strong>
             </span>
           </h2>
           <p>Copyright : {img.copyright || "/"}</p>
@@ -54,7 +55,10 @@ const App = () => {
           <p>To see image or video in original size, please click 
              <a href={img.url} target="_blank" rel="noopener noreferrer"> here</a>
           </p>
+          
          </div>
+      ) : ("Uh uh it's seems there's no picture today :/")}
+         
       </div>
       <h3>See you tomorrow for another wonderful image !</h3>
     </div>
