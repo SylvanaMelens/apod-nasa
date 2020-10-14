@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 
 const App = () => {
-  const [img, setImg] = useState([]);
+  const [img, setImg] = useState({});
 
   const ApiKey = process.env.REACT_APP_NASA_API_KEY;
 
@@ -36,7 +36,7 @@ const App = () => {
           <h1>Every day an astronomy picture from NASA, today is : </h1>
           <h2>
             <span data-descr={img.explanation}>
-              <strong> {img.title} </strong>
+              <strong> {img.title || "Uh uh it's seems there's no picture today :/"} </strong>
             </span>
           </h2>
           <p>Copyright : {img.copyright || "/"}</p>
@@ -54,9 +54,9 @@ const App = () => {
           <p>To see image or video in original size, please click 
              <a href={img.url} target="_blank" rel="noopener noreferrer"> here</a>
           </p>
-          <h3>See you tomorrow for another wonderful picture !</h3>
          </div>
       </div>
+      <h3>See you tomorrow for another wonderful image !</h3>
     </div>
   );
 };
