@@ -5,10 +5,11 @@
 
 # production
 /build
+/dist
 
 # misc
 .env
-
+.cache
 
 npm-debug.log*
 yarn-debug.log*
