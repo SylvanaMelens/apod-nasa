@@ -4,15 +4,11 @@
 /node_modules
 
 # production
-/build
-<<<<<<< HEAD
 /dist
 
 # misc
 .env
 .cache
-
->>>>>>> feb9b1117594b5222d0de7d43b44e8501eba6918
 
 npm-debug.log*
 yarn-debug.log*
