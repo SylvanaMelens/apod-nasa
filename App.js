@@ -57,7 +57,7 @@ const App = () => {
           </p>
           
          </div>
-      ) : ("Uh uh it's seems there's no picture today :/")}
+      ) : ("Searching for picture in a far away galaxy... Please wait... (if no picture is displayed after a minute, it means that we have hit something like an asteroid, then is it better to come back tomorrow) >_<")}
          
       </div>
       <h3>See you tomorrow for another wonderful image !</h3>
