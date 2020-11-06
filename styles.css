@@ -79,6 +79,12 @@ strong {
   text-align: center;
 }
 
+.load { 
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 span[data-descr] {
   position: relative;
   cursor: help;
